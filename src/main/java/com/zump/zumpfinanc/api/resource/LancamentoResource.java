@@ -36,7 +36,8 @@ public class LancamentoResource {
 	private final UsuarioService usuarioService;	
 	
 	@GetMapping
-	public ResponseEntity buscar(@RequestParam(value = "descricao", required = false) String descricao, @RequestParam(value = "mes", required = false) Integer mes, @RequestParam(value = "ano", required = false) Integer ano, @RequestParam("usuario") Long idUsuario) {
+	public ResponseEntity buscar(@RequestParam(value = "descricao", required = false) String descricao, @RequestParam(value = "mes", required = false) Integer mes, 
+			@RequestParam(value = "ano", required = false) Integer ano, @RequestParam("usuario") Long idUsuario) {
 		Lancamento lancamentoFiltro = new Lancamento();
 		lancamentoFiltro.setDescricao(descricao);
 		lancamentoFiltro.setMes(mes);
